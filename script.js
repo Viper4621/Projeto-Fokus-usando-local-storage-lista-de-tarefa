@@ -79,9 +79,8 @@ const contagemRegressiva = () => {
     if(tempoDecorridoEmSegundos <= 0){
         audioTempoFinalizado.play()
         alert('Tempo finalizado!')
-        //aqui criamos um evento customizado para disparar ao final do nosso timer e a continução colocamos em nosso crud.js
         const focoAtivo = html.getAttribute('data-contexto') == 'foco'
-        if(focoAtivo){
+        if (focoAtivo) {
             const evento = new CustomEvent('FocoFinalizado')
             document.dispatchEvent(evento)
         }
